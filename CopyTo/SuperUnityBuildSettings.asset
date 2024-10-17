@@ -1,0 +1,483 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8724055422502023624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5eec5b271bf45afaab0c21311a93e14, type: 3}
+  m_Name: WriteBuildNumber
+  m_EditorClassIdentifier: 
+  actionType: 0
+  actionName: WriteBuildNumber
+  note: 
+  actionEnabled: 1
+  configureEditor: 0
+  filter:
+    condition: 0
+    clauses: []
+  buildNumberFilePath: build_number.txt
+--- !u!114 &-8552613644739614869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2786f6b2301a94f4288672ff5305244c, type: 3}
+  m_Name: PC
+  m_EditorClassIdentifier: 
+  enabled: 1
+  distributionList:
+    distributions:
+    - distributionName: Windows_x64
+      enabled: 1
+  architectures:
+  - target: 5
+    name: Windows x86
+    enabled: 0
+    binaryNameFormat: '{0}.exe'
+  - target: 19
+    name: Windows x64
+    enabled: 1
+    binaryNameFormat: '{0}.exe'
+  variants:
+  - variantName: Build Output
+    selectedIndex: 0
+    values:
+    - App
+    - Visual Studio Solution
+    isFlag: 0
+  scriptingBackends:
+  - scriptingImplementation: 0
+    name: Mono
+    enabled: 1
+  - scriptingImplementation: 1
+    name: IL2CPP
+    enabled: 0
+  platformName: PC
+  targetGroup: 1
+--- !u!114 &-8500580160885667955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: ArchiveBuildOperation
+  m_EditorClassIdentifier: Assembly-CSharp-Editor:SuperUnityBuild.BuildActions:ArchiveBuildOperation
+  actionType: 1
+  actionName: ArchiveBuildOperation
+  note: 
+  actionEnabled: 1
+  configureEditor: 0
+  filter:
+    condition: 0
+    clauses: []
+  inputPath: $BUILDPATH
+  outputPath: $BUILDPATH
+  outputFileName: $PRODUCT_NAME-$RELEASE_TYPE-$VERSION.zip
+--- !u!114 &-8431086777208819413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d962d142a259c394da2bdb301b72eeb5, type: 3}
+  m_Name: macOS
+  m_EditorClassIdentifier: 
+  enabled: 1
+  distributionList:
+    distributions:
+    - distributionName: MacOS_Universal
+      enabled: 1
+  architectures:
+  - target: 2
+    name: macOS
+    enabled: 1
+    binaryNameFormat: '{0}.app'
+  variants:
+  - variantName: macOS Architecture
+    selectedIndex: 2
+    values:
+    - Intelx64
+    - Apple Silicon
+    - Universal
+    isFlag: 0
+  - variantName: Build Output
+    selectedIndex: 0
+    values:
+    - App
+    - Xcode Project
+    isFlag: 0
+  scriptingBackends:
+  - scriptingImplementation: 0
+    name: Mono
+    enabled: 1
+  - scriptingImplementation: 1
+    name: IL2CPP
+    enabled: 0
+  platformName: macOS
+  targetGroup: 1
+--- !u!114 &-7644280935648318093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfce74763fe14c6c9fe40292fe951da, type: 3}
+  m_Name: ArchiveBuildOperation
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: ArchiveBuildOperation
+  note: 
+  actionEnabled: 0
+  configureEditor: 0
+  filter:
+    condition: 0
+    clauses: []
+  inputPath: $BUILDPATH
+  outputPath: $BUILDPATH
+  outputFileName: ../$PRODUCT_NAME-$RELEASE_TYPE-$DISTRIBUTION.zip
+--- !u!114 &-5308481873234060601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfce74763fe14c6c9fe40292fe951da, type: 3}
+  m_Name: ArchiveBuildOperation
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: ArchiveBuildOperation
+  note: 
+  actionEnabled: 1
+  configureEditor: 0
+  filter:
+    condition: 0
+    clauses: []
+  inputPath: $BUILDPATH
+  outputPath: $BUILDPATH
+  outputFileName: $PRODUCT_NAME-$RELEASE_TYPE-$VERSION.zip
+--- !u!114 &-2703973976377889975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11398217ccc4492384f8432eb53a2e9b, type: 3}
+  m_Name: PrintBuildInfo
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: PrintBuildInfo
+  note: 
+  actionEnabled: 1
+  configureEditor: 0
+  filter:
+    condition: 0
+    clauses: []
+--- !u!114 &-2566533789092409513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc439ce9d1bfb34a821f7d6fabc4fef, type: 3}
+  m_Name: Linux
+  m_EditorClassIdentifier: 
+  enabled: 1
+  distributionList:
+    distributions:
+    - distributionName: Linux
+      enabled: 1
+  architectures:
+  - target: 24
+    name: Linux x64
+    enabled: 1
+    binaryNameFormat: '{0}.x86_64'
+  variants: []
+  scriptingBackends:
+  - scriptingImplementation: 0
+    name: Mono
+    enabled: 1
+  - scriptingImplementation: 1
+    name: IL2CPP
+    enabled: 0
+  platformName: Linux
+  targetGroup: 1
+--- !u!114 &-1927783449410022829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a3e2add53e41dc877776c9d64c3eb7, type: 3}
+  m_Name: PrintBuildNotifications
+  m_EditorClassIdentifier: 
+  actionType: 0
+  actionName: PrintBuildNotifications
+  note: 
+  actionEnabled: 1
+  configureEditor: 0
+  filter:
+    condition: 0
+    clauses: []
+--- !u!114 &-861081380666828301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430c602f273b45ffa39cc74a03319876, type: 3}
+  m_Name: WebGLBuildPathFix
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: WebGLBuildPathFix
+  note: 
+  actionEnabled: 1
+  configureEditor: 0
+  filter:
+    condition: 2
+    clauses:
+    - type: 1
+      comparison: 0
+      test: WebGL
+--- !u!114 &-24651017543217971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0acaf75cc66fc934ea46bf602fc7c245, type: 3}
+  m_Name: WebGL
+  m_EditorClassIdentifier: 
+  enabled: 1
+  distributionList:
+    distributions:
+    - distributionName: WebGL
+      enabled: 1
+  architectures:
+  - target: 20
+    name: WebGL
+    enabled: 1
+    binaryNameFormat: '{0}'
+  variants: []
+  scriptingBackends:
+  - scriptingImplementation: 1
+    name: IL2CPP
+    enabled: 1
+  platformName: WebGL
+  targetGroup: 13
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5886119a5c7b34d8872ab527ca3e1b, type: 3}
+  m_Name: SuperUnityBuildSettings
+  m_EditorClassIdentifier: 
+  _basicSettings:
+    baseBuildFolder: Builds
+    buildPath: $DISTRIBUTION
+    openFolderPostBuild: 0
+    constantsFileLocation: Assets/SuperUnityBuild
+  _productParameters:
+    buildCounter: 15
+    buildVersion: 1.0.0.10
+    versionTemplate: 1.0.0.$BUILD
+    autoGenerate: 1
+    syncWithPlayerSettings: 0
+  _releaseTypeList:
+    releaseTypes:
+    - typeName: Release
+      bundleIdentifier: com.faranglet.JAMGAME
+      companyName: faranglet
+      productName: JAMGAME
+      syncAppNameWithProduct: 1
+      appBuildName: JAMGAME
+      buildOptions: 0
+      customDefines: 
+      sceneList:
+        releaseScenes: []
+  _platformList:
+    platforms:
+    - {fileID: -24651017543217971}
+    - {fileID: -8431086777208819413}
+    - {fileID: -8552613644739614869}
+    - {fileID: -2566533789092409513}
+  _projectConfigurations:
+    configSet:
+      _Buckets: ffffffff06000000ffffffff10000000ffffffffffffffff0200000005000000ffffffff0d000000ffffffff0e0000000400000008000000ffffffff0a0000000c000000
+      _HashCodes: d474f968f27e482d6d38f6476da5e235c8c86a21d03dcd4dceee4e3995803a144c86327ff7e46342878a7279510e9f59ec03b36c7bbca86c134e5c09fe3787562d6dfd48
+      _Next: ffffffffffffffffffffffff01000000ffffffffffffffff00000000ffffffffffffffffffffffff07000000ffffffffffffffff03000000090000000b0000000f000000
+      _Count: 17
+      _Version: 17
+      _FreeList: -1
+      _FreeCount: 0
+      _Keys:
+      - Release/WebGL/WebGL/IL2CPP/WebGL
+      - Release/WebGL/WebGL/IL2CPP
+      - Release/WebGL/WebGL
+      - Release/WebGL
+      - Release/macOS/macOS (Universal,App)/Mono/MacOS_Universal
+      - Release/macOS/macOS (Universal,App)/Mono
+      - Release/macOS/macOS (Universal,App)
+      - Release/macOS
+      - Release/PC/Windows x64 (App)/Mono/Windows_x64
+      - Release/PC/Windows x64 (App)/Mono
+      - Release/PC/Windows x64 (App)
+      - Release/PC
+      - Release/Linux/Linux x64/Mono/Linux
+      - Release/Linux/Linux x64/Mono
+      - Release/Linux/Linux x64
+      - Release/Linux
+      - Release
+      _Values:
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Release/WebGL/WebGL/IL2CPP/WebGL
+      - enabled: 1
+        childKeys:
+        - Release/WebGL/WebGL/IL2CPP
+      - enabled: 1
+        childKeys:
+        - Release/WebGL/WebGL
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Release/macOS/macOS (Universal,App)/Mono/MacOS_Universal
+      - enabled: 1
+        childKeys:
+        - Release/macOS/macOS (Universal,App)/Mono
+      - enabled: 1
+        childKeys:
+        - Release/macOS/macOS (Universal,App)
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Release/PC/Windows x64 (App)/Mono/Windows_x64
+      - enabled: 1
+        childKeys:
+        - Release/PC/Windows x64 (App)/Mono
+      - enabled: 1
+        childKeys:
+        - Release/PC/Windows x64 (App)
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Release/Linux/Linux x64/Mono/Linux
+      - enabled: 1
+        childKeys:
+        - Release/Linux/Linux x64/Mono
+      - enabled: 1
+        childKeys:
+        - Release/Linux/Linux x64
+      - enabled: 1
+        childKeys:
+        - Release/WebGL
+        - Release/macOS
+        - Release/PC
+        - Release/Linux
+    showViewOptions: 0
+    showConfigs: 0
+    showBuildInfo: 0
+    hideDisabled: 0
+    treeView: 0
+    selectedKeyChain: Release/macOS/macOS (Universal,App)/Mono/MacOS_Universal
+  _preBuildActions:
+    buildActions: []
+  _postBuildActions:
+    buildActions:
+    - {fileID: -861081380666828301}
+    - {fileID: -7644280935648318093}
+    - {fileID: -2703973976377889975}
+    - {fileID: -1927783449410022829}
+    - {fileID: -8724055422502023624}
+--- !u!114 &5497017536488629598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0f7a04940394844a505e73c3eb8cec, type: 3}
+  m_Name: ZipFileOperation
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: ZipFileOperation
+  note: 
+  actionEnabled: 1
+  configureEditor: 0
+  filter:
+    condition: 0
+    clauses: []
+  inputPath: $BUILDPATH
+  outputPath: $BUILDPATH
+  outputFileName: $PRODUCT_NAME-$RELEASE_TYPE-$DISTRIBUTION-$VERSION.zip
+--- !u!114 &6403032405104414774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: ArchiveBuildOperation
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: ArchiveBuildOperation
+  note: 
+  actionEnabled: 1
+  configureEditor: 0
+  filter:
+    condition: 0
+    clauses: []
+  inputPath: $BUILDPATH
+  outputPath: $BUILDPATH
+  outputFileName: $PRODUCT_NAME-$RELEASE_TYPE-$VERSION.zip

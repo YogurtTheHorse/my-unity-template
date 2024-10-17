@@ -1,0 +1,11 @@
+{
+  "name": "se.yogurtthehor.unity.template",
+  "version": "0.0.1",
+  "description": "Package I use for creating Unity projects for Jams and personal stuff.",
+  "displayName": "Yogurt Template",
+  "author": {
+    "name": "Yogurt The Horse",
+    "email": "yegor@yogurtthwhor.se",
+    "url": "https://yogurtthehor.se"
+  }
+}
