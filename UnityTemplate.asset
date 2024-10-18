@@ -34,4 +34,5 @@ MonoBehaviour:
     - com.github.superunitybuild.buildtool
   requiredPackages:
   - https://github.com/Deadcows/MyBox.git
+  - https://github.com/yogurtthehorse/unity-build-actions.git
   - com.github.superunitybuild.buildtool@7.0.0
