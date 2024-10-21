@@ -36,3 +36,4 @@ MonoBehaviour:
   - https://github.com/Deadcows/MyBox.git
   - https://github.com/yogurtthehorse/unity-build-actions.git
   - com.github.superunitybuild.buildtool@7.0.0
+  - https://github.com/mackysoft/Unity-SerializeReferenceExtensions.git?path=Assets/MackySoft/MackySoft.SerializeReferenceExtensions
