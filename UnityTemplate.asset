@@ -15,7 +15,10 @@ MonoBehaviour:
   folders:
   - Assets/Tech/Code
   - Assets/Tech/Shaders
+  - Assets/Objects/Prefabs
+  - Assets/Objects/Scenes
   - Assets/Art/Sprites
+  - Assets/Art/Fonts
   - Assets/Art/Textures
   - Assets/Art/Materials
   - Assets/Art/Audio
@@ -35,5 +38,6 @@ MonoBehaviour:
   requiredPackages:
   - https://github.com/Deadcows/MyBox.git
   - https://github.com/yogurtthehorse/unity-build-actions.git
+  - git+https://gitlab.hotreload.net/root/hot-reload-releases.git#1.12.14
   - com.github.superunitybuild.buildtool@7.0.0
   - https://github.com/mackysoft/Unity-SerializeReferenceExtensions.git?path=Assets/MackySoft/MackySoft.SerializeReferenceExtensions
